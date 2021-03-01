@@ -1,0 +1,20 @@
+# 配置当前使用的环境配置
+spring:
+  profiles:
+    active: dev # 当前启用配置文件模块中的环境配置
+---
+# 开发环境
+spring:
+  profiles: dev
+  application:
+    name: config-dev
+server:
+  port: 4001
+---
+# 生产环境
+spring:
+  profiles: prod
+  application:
+    name: config-prod
+server:
+  port: 4002
